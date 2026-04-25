@@ -11,7 +11,7 @@ This branch contains the Next.js foundation and a static cockpit shell. It inten
 - Next.js App Router
 - TypeScript
 - Tailwind CSS
-- pnpm
+- npm
 
 Planned follow-up slices:
 
@@ -24,8 +24,8 @@ Planned follow-up slices:
 ## Development
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
