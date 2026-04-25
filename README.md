@@ -12,10 +12,11 @@ This branch contains the Next.js foundation and a static cockpit shell. It inten
 - TypeScript
 - Tailwind CSS
 - npm
+- PostgreSQL
+- Prisma ORM
 
 Planned follow-up slices:
 
-- `feat/prisma-domain-model` for PostgreSQL and Prisma tables
 - `feat/local-document-vault` for uploads and local artifact storage
 - `feat/finance-engine` for safe-to-spend and due-soon calculations
 - `feat/review-inbox` for low-confidence import correction
@@ -29,6 +30,28 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+## Database
+
+Create a local environment file:
+
+```bash
+cp .env.example .env
+```
+
+Set `DATABASE_URL` to a local PostgreSQL database, then run:
+
+```bash
+npm run db:generate
+npm run db:migrate
+```
+
+Useful database commands:
+
+- `npm run db:validate` checks the Prisma schema
+- `npm run db:generate` regenerates Prisma Client
+- `npm run db:migrate` applies local migrations
+- `npm run db:studio` opens Prisma Studio
 
 ## Branching
 
